@@ -1,13 +1,25 @@
 .blog-nav {
-	margin: 20px 0px 10px;
+	margin: 10px 0;
 }
 .blog-nav ul {
 	list-style: none;
 	padding-left: 0;
 }
 .blog-nav ul li {
-	margin: 10px 0 10px;
+	margin: 10px 20px 10px 0;
+	display: inline-block;
 }
+
+@media screen and (min-width: 500px) {
+  .blog-nav {
+    margin: 20px 0 10px;
+  }
+	.blog-nav ul li {
+		margin-right: 0;
+		display: block;
+	}
+}
+
 .blog-nav ul li a {
 	font-size: 16px;
 	line-heigh: 26px;

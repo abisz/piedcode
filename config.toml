@@ -1,11 +1,14 @@
-siteTitle = "Blog by John Doe"
-siteDescr = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-siteAuthor = "John Doe"
+siteTitle = "PiedCode"
+siteDescr = "Blog about the daily challenges and discoveries of an aspiring web developer"
+siteAuthor = "Simon Reinsperger"
+
+useGravatar = true
+gravatarHash = '40e23134e2c0a3d11251c21fdcb813d6'
 
 siteTelegramUrl = "#"
-siteTwitterUrl = "#"
-siteGithubUrl = "#"
-siteEmailUrl = "#"
+siteTwitterUrl = "https://twitter.com/simon_rsp"
+siteGithubUrl = "https://github.com/abisz"
+siteEmailUrl = "mailto:reinsperger.smn@gmail.com"
 siteRssUrl = "#"
 siteVkUrl = "#"
 
