@@ -29,6 +29,6 @@ class SiteNav extends React.Component {
 
 SiteNav.propTypes = {
   location: React.PropTypes.object,
-}
+};
 
 export default SiteNav

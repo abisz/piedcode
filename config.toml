@@ -5,11 +5,11 @@ siteAuthor = "Simon Reinsperger"
 useGravatar = true
 gravatarHash = '40e23134e2c0a3d11251c21fdcb813d6'
 
-siteTelegramUrl = "#"
+siteYouTubeUrl = "https://www.youtube.com/channel/UCTi2gmJFc_cGwuo8Igvsmxw"
 siteTwitterUrl = "https://twitter.com/simon_rsp"
 siteGithubUrl = "https://github.com/abisz"
 siteEmailUrl = "mailto:reinsperger.smn@gmail.com"
 siteRssUrl = "#"
-siteVkUrl = "#"
+siteCodePenUrl = "http://codepen.io/abisz/"
 
 linkPrefix = "/gatsby-starter-lumen"

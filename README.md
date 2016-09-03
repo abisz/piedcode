@@ -1,31 +1,24 @@
-# Lumen
+# PiedCode
 
-Gatsby starter for creating a blog
+Blog about Web Development
 
-## Features
-+ Inline CSS.
-+ Clean and extensible code.
-+ Six simple components: SiteSidebar, SiteNav, SiteLinks, SitePost, SitePage, ReadNext.
-+ [peterramsing/lost](https://github.com/peterramsing/lost) as a base for Grid.
-+ [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg) as a base for Typography.
+based on [Lumen](https://github.com/wpioneer/gatsby-starter-lumen) by Alexandr Shelepenok (https://github.com/wpioneer)
 
-## Installing
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new lumen https://github.com/wpioneer/gatsby-starter-lumen`
+Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 
 ## Running in development
 `gatsby develop`
 
-![](http://i.imgur.com/422y5GV.png)
+## Roadmap
 
-## Ports
-
-[Statinamic port](https://github.com/thangngoc89/statinamic-theme-lumen) by [Khoa Nguyen](https://github.com/thangngoc89)
+-[] Google Analytics
+-[] Disqus
+-[] RSS
 
 ## License
 The MIT license.
 
-Copyright (c) 2016 Alexandr Shelepenok [ashk.io](http://ashk.io)
+Copyright (c) 2016 Simon Reinsperger
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

@@ -8,7 +8,7 @@
 	padding: 25px 20px;
 }
 
-@media screen and (min-width:500px) {
+@media screen and (min-width: 550px) {
 	.content {
 		lost-column: 7/12;
 	}
@@ -16,9 +16,9 @@
 		padding: 30px 20px;
 	}
 }
-@media screen and (min-width:900px) {
+@media screen and (min-width: 900px) {
 	.content {
-		lost-column: 2/4;
+		lost-column: 7/10;
 	}
 	.main-inner {
 		padding: 35px 20px;

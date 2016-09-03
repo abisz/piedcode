@@ -10,7 +10,7 @@
 	display: inline-block;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   .blog-nav {
     margin: 20px 0 10px;
   }
