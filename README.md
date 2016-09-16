@@ -11,8 +11,8 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 
 ## Roadmap
 
-- [ ] Google Analytics
-- [ ] Disqus
+- [x] Google Analytics
+- [x] Disqus
 - [ ] RSS
 
 ## License

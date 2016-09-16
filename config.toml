@@ -16,3 +16,5 @@ siteRssUrl = "#"
 siteCodePenUrl = "http://codepen.io/abisz/"
 
 linkPrefix = "/"
+
+googleAnalyticsId = "UA-73061728-1"
