@@ -33,11 +33,11 @@ class SitePost extends React.Component {
           </div>
           <div className='footer'>
             <ReadNext post={ post } {...this.props}/>
-            <hr></hr>
+            <hr/>
             <p>
               { config.siteDescr }
-              <a href={ config.twitter }>
-                <br></br> <strong>{ config.siteAuthor }</strong> on Twitter</a>
+              <a href={ config.siteTwitterUrl }>
+                <br/><strong>{ config.siteAuthor }</strong> on Twitter</a>
             </p>
           </div>
         </div>

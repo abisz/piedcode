@@ -2,7 +2,7 @@
 
 Blog about Web Development
 
-based on [Lumen](https://github.com/wpioneer/gatsby-starter-lumen) by Alexandr Shelepenok (https://github.com/wpioneer)
+based on [Lumen](https://github.com/wpioneer/gatsby-starter-lumen) by [Alexandr Shelepenok](https://github.com/wpioneer)
 
 Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 
@@ -11,9 +11,9 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 
 ## Roadmap
 
--[] Google Analytics
--[] Disqus
--[] RSS
+- [ ] Google Analytics
+- [ ] Disqus
+- [ ] RSS
 
 ## License
 The MIT license.
