@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import ReactDisqusThread from 'react-disqus-thread'
 import {RouteHandler, Link} from 'react-router'
 import DocumentTitle from 'react-document-title'
 import {prefixLink} from 'gatsby-helpers'
@@ -19,6 +20,12 @@ class SitePost extends React.Component {
         </Link>
       </div>
     );
+    const disqus = (
+      <ReactDisqusThread
+      shortname = { config.disqusShortname }
+      identifier = { this.props.route.path }
+      />
+    );
 
     return (
       <div>
@@ -33,6 +40,7 @@ class SitePost extends React.Component {
           </div>
           <div className='footer'>
             <ReadNext post={ post } {...this.props}/>
+            { config.useDisqus ? disqus : ''}
             <hr/>
             <p>
               { config.siteDescr }
