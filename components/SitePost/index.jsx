@@ -43,7 +43,7 @@ class SitePost extends React.Component {
             { config.useDisqus ? disqus : ''}
             <hr/>
             <p>
-              { config.siteDescr }
+              { config.siteDesc }
               <a href={ config.siteTwitterUrl }>
                 <br/><strong>{ config.siteAuthor }</strong> on Twitter</a>
             </p>

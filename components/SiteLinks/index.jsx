@@ -31,7 +31,7 @@ class SiteLinks extends React.Component {
         </ul>
         <ul>
           <li>
-            <a href={ config.siteRSSUrl }><i className='fa fa-rss'></i></a>
+            <a href={ prefixLink(config.siteRssUrl) }><i className='fa fa-rss'></i></a>
           </li>
         </ul>
       </div>

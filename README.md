@@ -15,6 +15,9 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 - [x] Disqus
 - [ ] RSS
 
+## Todo
+- [ ] Find solution to integrate Disqus in non-SPA build
+
 ## License
 The MIT license.
 

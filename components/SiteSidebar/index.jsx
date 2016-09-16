@@ -28,7 +28,7 @@ class SiteSidebar extends React.Component {
         ) :
           <h2><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h2> }
         <p>
-          { config.siteDescr }
+          { config.siteDesc }
         </p>
       </header>
     );
