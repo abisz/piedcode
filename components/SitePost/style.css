@@ -72,24 +72,20 @@
 	position: static;
 	margin: 20px auto 0;
 	text-align: center;
-	width: 110px;
+	width: 120px;
 	display: block;
 	font-size: 16px;
 	padding: 8px 16px;
 	color: #999;
-	background: #f4f4f4;
 	font-weight: 400;
+  box-sizing: border-box;
+  border: 2px solid currentColor;
 	border-radius: 3px;
 }
-.gohome:focus {
+
+.gohome:focus,
+.gohome:hover{
 	color: #444;
-	background: #f4f4f4;
-	border: 0;
-}
-.gohome:hover {
-	color: #444;
-	background: #f4f4f4;
-	border: 0;
 }
 
 @media (min-width: 900px) {
