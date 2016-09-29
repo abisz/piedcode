@@ -15,9 +15,11 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 - [x] Disqus
 - [x] RSS
 - [x] Gist Component
+- [ ] Social Media Share Buttons
+- [ ] Automated Spell Checking
 
 ## Todo
-- [ ] Find solution to integrate Disqus in non-SPA build
+- [ ] Find solution to integrate Disqus and Gists in non-SPA build
 - [ ] Refactor EmbeddedGist to match coding style of other components
 
 ## License
