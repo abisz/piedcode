@@ -83,6 +83,13 @@ _.forEach(posts, post => {
   });
 });
 
+
+try{
+  fs.statSync('public')
+} catch (e) {
+  fs.mkdirSync('public');
+}
+
 fs.writeFileSync('public/rss.xml', feed.render('rss-2.0'));
 fs.writeFileSync('public/atom.xml', feed.render('atom-1.0'));
 

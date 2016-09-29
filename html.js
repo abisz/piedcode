@@ -22,7 +22,9 @@ module.exports = React.createClass({
 
     if ( process.env.NODE_ENV !== 'production' || config.buildSPA ) {
       js =  <script src={ prefixLink(`/bundle.js?t=${BUILD_TIME}`) }/>;
-    } else {
+    }
+
+    if ( process.env.NODE_ENV === 'production' && ! config.buildSPA ) {
       ga = <script dangerouslySetInnerHTML={ {__html: require('!raw!./static/ga-snippet.js').replace('UA-XXXXX-Y', config.googleAnalyticsId)} }></script>;
     }
 

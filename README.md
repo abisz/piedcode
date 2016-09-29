@@ -13,7 +13,8 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 
 - [x] Google Analytics
 - [x] Disqus
-- [ ] RSS
+- [x] RSS
+- [ ] Github Gist Support
 
 ## Todo
 - [ ] Find solution to integrate Disqus in non-SPA build

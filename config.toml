@@ -18,7 +18,7 @@ siteEmailUrl = "mailto:reinsperger.smn@gmail.com"
 siteRssUrl = "/rss.xml"
 siteCodePenUrl = "http://codepen.io/abisz/"
 
-linkPrefix = "/mt-disqus-gatsby"
+linkPrefix = "/public"
 
 googleAnalyticsId = "UA-73061728-1"
 
