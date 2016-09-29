@@ -21,19 +21,21 @@ class SiteIndex extends React.Component {
         const datePublished = access(page, 'data.date');
         const category = access(page, 'data.category');
 
-        pageLinks.push(
-          <div className='blog-post'>
-            <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
-              { moment(datePublished).format('MMMM YYYY') }
-            </time>
-            <span style={ {padding: '5px'} }></span>
-            <span className='blog-category'>{ category }</span>
-            <h2><Link style={ {borderBottom: 'none',} } to={ prefixLink(page.path) }> { title } </Link></h2>
-            <p dangerouslySetInnerHTML={ {__html: description} }/>
-            <Link className='readmore' to={ prefixLink(page.path) }> Read
-            </Link>
-          </div>
-        )
+        if ( ! access(page, 'data.hide') ) {
+          pageLinks.push(
+            <div className='blog-post'>
+              <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
+                { moment(datePublished).format('MMMM YYYY') }
+              </time>
+              <span style={ {padding: '5px'} }></span>
+              <span className='blog-category'>{ category }</span>
+              <h2><Link style={ {borderBottom: 'none',} } to={ prefixLink(page.path) }> { title } </Link></h2>
+              <p dangerouslySetInnerHTML={ {__html: description} }/>
+              <Link className='readmore' to={ prefixLink(page.path) }> Read
+              </Link>
+            </div>
+          )
+        }
       }
     });
 
