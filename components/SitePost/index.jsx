@@ -9,6 +9,7 @@ import {config} from 'config'
 import ReadNext from '../ReadNext'
 import './style.css'
 import '../../static/css/highlight.css'
+import EmbeddedGist from '../EmbeddedGist'
 
 class SitePost extends React.Component {
   render() {
@@ -27,13 +28,33 @@ class SitePost extends React.Component {
       />
     );
 
+    const regGists = /\(gist=(.*)\)/g,
+          regBody = /\(gist=.*\)/g;
+
+    let bodyParts = post.body.split(regBody);
+
+    let gists = [];
+    let found;
+    while ( (found = regGists.exec(post.body)) !== null ) {
+      gists.push(found[1]);
+    }
+
     return (
       <div>
         { home }
         <div className='blog-single'>
           <div className='text'>
             <h1>{ post.title }</h1>
-            <div dangerouslySetInnerHTML={ {__html: post.body} }/>
+            { bodyParts.map( (part, i) => {
+              return (
+                <div>
+                  <div dangerouslySetInnerHTML={ {__html: part} }/>
+                  { gists[i] ? (
+                    <EmbeddedGist gist= { gists[i] }></EmbeddedGist>
+                  ) : ''}
+                </div>
+              );
+            }) }
             <div className='date-published'>
               <em>Published { moment(post.date).format('D MMM YYYY') }</em>
             </div>

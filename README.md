@@ -14,10 +14,11 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 - [x] Google Analytics
 - [x] Disqus
 - [x] RSS
-- [ ] Github Gist Support
+- [x] Gist Component
 
 ## Todo
 - [ ] Find solution to integrate Disqus in non-SPA build
+- [ ] Refactor EmbeddedGist to match coding style of other components
 
 ## License
 The MIT license.
