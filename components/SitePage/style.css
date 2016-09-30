@@ -10,6 +10,9 @@
 	line-height: 26px;
 	margin-bottom: 26px;
 }
+.blog-page a {
+	font-weight: bold;
+}
 @media (max-width:900px) {
 	.blog-single .text, .blog-single .footer {
 		padding: 0 15px;

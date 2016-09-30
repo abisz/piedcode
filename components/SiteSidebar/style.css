@@ -44,9 +44,14 @@
 	}
 }
 
-.sidebar .sidebar-inner p.copyright {
+.sidebar .sidebar-inner p.bottom-line {
 	color: #b6b6b6;
 	font-size: 14px;
+}
+
+.sidebar .sidebar-inner p.bottom-line a::before,
+.sidebar .sidebar-inner p.bottom-line a::after {
+	content: ' ';
 }
 
 @media screen and (min-width: 550px) {

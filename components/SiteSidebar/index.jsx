@@ -45,8 +45,15 @@ class SiteSidebar extends React.Component {
             <SiteNav {...this.props}/>
             <footer>
               <SiteLinks {...this.props}/>
-              <p className='copyright'>
-                &copy; All rights reserved.
+              <p className='bottom-line'>
+                powered by
+                <a target="_blank" href="https://github.com/gatsbyjs/gatsby">
+                  gatsby
+                </a>
+                - feel free to
+                <a target="_blank" href="https://github.com/abisz/piedcode">
+                  fork
+                </a>
               </p>
             </footer>
           </div>
