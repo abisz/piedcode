@@ -6,7 +6,7 @@ path: "/creating-a-wordpress-theme-using-underscore_s/"
 category: "Wordpress"
 description: "The Underscore_s template can save you a lot of time when developing Wordpress Themes. Here are some basic things to get started."
 hide: true
-readNext: ""
+readNext: "tutorial-creating-a-separate-member-menu-in-wordpress"
 ---
 There are countless WP themes available on the web, good and bad ones, some of them are free to use, for some you have to pay. It’s pretty easy to make your site look good and work properly and you can have a successful website without ever writing one line of code, which is great, because it also means that you don’t have to know anything about programming. But there are some benefits from creating your own custom theme.
 

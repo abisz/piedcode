@@ -15,6 +15,7 @@ Made with [Gatsby](https://github.com/gatsbyjs/gatsby)
 - [x] Disqus
 - [x] RSS
 - [x] Gist Component
+- [ ] Embedded CodePen Component
 - [ ] Social Media Share Buttons
 - [ ] Automated Spell Checking
 
