@@ -7,3 +7,5 @@ pages/.manifest
 gatsby-starter-lumen.iml
 
 npm-debug.log
+
+secret.sh
