@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="./secret.sh"
+FILE="../secret.sh"
 UPLOAD="public"
 
 if [ ! -f $FILE ]; then

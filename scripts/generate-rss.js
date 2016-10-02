@@ -67,12 +67,6 @@ _.forEach(posts, post => {
   const url = config.siteDomain + data.path;
   const desc = data.description + ` <a href="${url}">Read more&nbsp;»</a>`;
 
-  // console.log(new Date(data.date));
-  // console.log(data.date);
-
-  // console.log(moment(data.date));
-
-
   feed.addItem({
     title: data.title,
     link: url,
