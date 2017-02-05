@@ -87,8 +87,6 @@ try{
 fs.writeFileSync('public/rss.xml', feed.render('rss-2.0'));
 fs.writeFileSync('public/atom.xml', feed.render('atom-1.0'));
 
-
-
 // again kudos to https://github.com/scottnonnenberg/blog/blob/master/src/util/fixLocalLinks.js
 function fixLocalLinks(html, domain) {
   if (!html) {
