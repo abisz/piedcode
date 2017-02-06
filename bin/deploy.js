@@ -1,6 +1,9 @@
 const exec = require('child_process').exec,
   ftpClient = require('ftp'),
-  fs = require('fs');
+  fs = require('fs'),
+  async = require('async');
+
+const ignoreFiles = ['.', '..', '.htaccess'];
 
 let secret;
 
@@ -13,7 +16,7 @@ try {
 
 const connection = new ftpClient();
 
-exec('gatsby build', (error, stdout, stderr) => {
+exec('echo Hello world', (error, stdout, stderr) => {
   if (error) {
     console.log('Error while building Gatsby');
     process.exit();
@@ -27,13 +30,10 @@ exec('gatsby build', (error, stdout, stderr) => {
 
     connection.on('ready', () => {
 
-      connection.rmdir('', true, err => {
-        if (err) {
-          console.log('Error while cleaning server');
-          process.exit();
-        }
+      cleanServer( () => {
 
         console.log('Server cleaned');
+        console.log('Starting upload');
 
         fs.readdir('public', (err, filenames) => {
           filenames.forEach( f => {
@@ -79,3 +79,44 @@ exec('gatsby build', (error, stdout, stderr) => {
     });
   });
 });
+
+function cleanServer(finished) {
+  connection.list( (err, files) => {
+    if (err) {
+      console.log('Error while listing ftp files');
+      console.log(err);
+      process.exit();
+    }
+
+    async.each(files, (f, cb) => {
+      if ( ! ignoreFiles.includes(f.name)) {
+        if (f.type === 'd') {
+          connection.rmdir(f.name, true, (err) => {
+            if (err) {
+              console.log('Error while deleting directory');
+              console.log(err);
+            }
+            cb();
+          })
+        } else {
+          connection.delete(f.name, (err) => {
+            if (err) {
+              console.log('Error while deleting file');
+              console.log(err);
+            }
+            cb();
+          });
+        }
+      } else {
+        cb();
+      }
+    }, err => {
+      if (err) {
+        console.log('Error occured while deleting server files');
+        console.log(err);
+      }
+
+      finished();
+    });
+  });
+}
