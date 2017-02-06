@@ -16,7 +16,7 @@ try {
 
 const connection = new ftpClient();
 
-exec('echo Hello world', (error, stdout, stderr) => {
+exec('gatsby build', (error, stdout, stderr) => {
   if (error) {
     console.log('Error while building Gatsby');
     process.exit();
