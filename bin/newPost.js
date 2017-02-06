@@ -13,7 +13,7 @@ const name = process.argv[2],
 title: "${name}"
 date: "${(new Date).toISOString()}"
 layout: post
-path: /${formatted}/"
+path: "/${formatted}/"
 category: ""
 description: ""
 readNext: ""
