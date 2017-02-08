@@ -205,7 +205,7 @@ Interested in learning more about ML?
 
 Here's a list of resources that I found interesting.
 - [Talk about ML in the browser](https://www.youtube.com/watch?v=VQRzWiscu4U)
-- [Free ML universtiy course](https://www.work.caltech.edu/telecourse.html)
+- [Free ML university course](https://www.work.caltech.edu/telecourse.html)
 - [Talk about the future role of AI](https://www.ted.com/talks/kevin_kelly_how_ai_can_bring_on_a_second_industrial_revolution)
 - [Introduction to Reinforcement Learning](https://deeplearning4j.org/reinforcementlearning.html)
 
