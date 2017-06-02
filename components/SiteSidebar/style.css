@@ -38,6 +38,12 @@
 	margin-bottom: 13px;
 }
 
+.blog-details .homeLink {
+	text-decoration: none;
+	border-bottom: none;
+	color: inherit;
+}
+
 @media screen and (min-width: 550px) {
 	.sidebar .sidebar-inner p {
 		margin-bottom: 26px;

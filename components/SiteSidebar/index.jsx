@@ -9,27 +9,24 @@ import profilePic from '../../pages/photo.jpg'
 
 class SiteSidebar extends React.Component {
   render() {
-    const {location, children} = this.props;
+    const { location } = this.props;
     const isHome = location.pathname === prefixLink('/');
+
+    const pictureSrc = config.useGravatar ?
+      'https://s.gravatar.com/avatar/' + config.gravatarHash + '?s=300' :
+      prefixLink(profilePic);
+
+    const homeLink = <Link className="homeLink" to={ prefixLink('/') }>{config.siteAuthor}</Link>;
 
     let header = (
       <header>
         <Link style={ {    textDecoration: 'none',    borderBottom: 'none',    outline: 'none'} } to={ prefixLink('/') }>
-
-          { config.useGravatar ?
-            <img src={'https://s.gravatar.com/avatar/' + config.gravatarHash + '?s=300'} width='75' height='75' />
-            :
-            <img src={prefixLink(profilePic)} width='75' height='75' />
-          }
-
+          <img src={pictureSrc} alt="Picture of the author" width='75' height='75'/>
         </Link>
-        { isHome ? (
-          <h1><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h1>
-        ) :
-          <h2><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h2> }
-        <p>
-          { config.siteDesc }
-        </p>
+
+        { isHome ? <h1>{homeLink}</h1> : <h2>{homeLink}</h2> }
+
+        <p>{config.siteDesc}</p>
       </header>
     );
 
@@ -64,7 +61,6 @@ class SiteSidebar extends React.Component {
 }
 
 SiteSidebar.propTypes = {
-  children: React.PropTypes.any,
   location: React.PropTypes.object,
 };
 
