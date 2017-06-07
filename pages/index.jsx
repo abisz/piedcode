@@ -1,11 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 import sortBy from 'lodash/sortBy'
 import moment from 'moment'
 import DocumentTitle from 'react-document-title'
-import {prefixLink} from 'gatsby-helpers'
+import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
-import {config} from 'config'
+import { config } from 'config'
 import SiteSidebar from '../components/SiteSidebar'
 
 class SiteIndex extends React.Component {
@@ -22,11 +22,11 @@ class SiteIndex extends React.Component {
 
         if ( ! access(page, 'data.hide') ) {
           pageLinks.push(
-            <div className='blog-post'>
+            <div className='blog-post' key={datePublished}>
               <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
                 { moment(datePublished).format('MMMM YYYY') }
               </time>
-              <span style={ {padding: '5px'} }></span>
+              <span style={{ padding: '5px' }} />
               <span className='blog-category'>{ category }</span>
               <h2><Link style={ {borderBottom: 'none',} } to={ prefixLink(page.path) }> { title } </Link></h2>
               <p dangerouslySetInnerHTML={ {__html: description} }/>
