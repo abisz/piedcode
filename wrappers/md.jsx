@@ -10,7 +10,9 @@ class MarkdownWrapper extends React.Component {
     const post = route.page.data;
     const layout = post.layout;
 
-    const template = layout !== 'page' ? <SitePost {...this.props} /> : <SitePage {...this.props} />;
+    const template = layout !== 'page' ?
+      <SitePost {...this.props} /> :
+      <SitePage {...this.props} />;
 
     return (
       <DocumentTitle title={`${post.title} - ${config.siteTitle}`}>

@@ -24,18 +24,18 @@ const posts = _.chain(postDirs)
   .sortBy()
   .reverse()
   .map(dir => {
-    const dirPath = path.join(postsPath, dir),
-          filename = fs.readdirSync(dirPath).filter(file => /.md$/.test(file))[0],
-          filePath = path.join(dirPath, filename),
-          contents = fs.readFileSync(filePath).toString(),
-          metaData = frontMatter(contents);
+    const dirPath = path.join(postsPath, dir);
+    const filename = fs.readdirSync(dirPath).filter(file => /.md$/.test(file))[0];
+    const filePath = path.join(dirPath, filename);
+    const contents = fs.readFileSync(filePath).toString();
+    const metaData = frontMatter(contents);
 
     return {
       path: filePath,
       contents,
       body: md.render(metaData.body),
-      data: metaData.attributes
-    }
+      data: metaData.attributes,
+    };
   })
   .value();
 
@@ -45,7 +45,7 @@ const config = toml.parse(fs.readFileSync(configPath).toString());
 const author = {
   name: config.siteAuthor,
   email: config.siteAuthorEmail,
-  link: config.siteAuthorUrl
+  link: config.siteAuthorUrl,
 };
 
 const now = moment(new Date());
@@ -58,14 +58,23 @@ const feed = new Feed({
   copyright: `All rights reserved ${now.format('YYYY')}, ${config.siteAuthor}`,
   updated: now.toJSON(),
   feed: `${config.domain}/atom.xml`,
-  author
+  author,
 });
 
-_.forEach(posts, post => {
+// again kudos to https://github.com/scottnonnenberg/blog/blob/master/src/util/fixLocalLinks.js
+function fixLocalLinks(html, domain) {
+  if (!html) {
+    return html;
+  }
 
+  const linkR = /href="(\/[^"]*)"/g;
+  return html.replace(linkR, (match, link) => `href="${domain + link}"`);
+}
+
+_.forEach(posts, post => {
   const data = post.data;
   const url = config.siteDomain + data.path;
-  const desc = data.description + ` <a href="${url}">Read more&nbsp;»</a>`;
+  const desc = `${data.description} <a href="${url}">Read more&nbsp;»</a>`;
 
   feed.addItem({
     title: data.title,
@@ -77,22 +86,11 @@ _.forEach(posts, post => {
   });
 });
 
-
-try{
-  fs.statSync('public')
+try {
+  fs.statSync('public');
 } catch (e) {
   fs.mkdirSync('public');
 }
 
 fs.writeFileSync('public/rss.xml', feed.render('rss-2.0'));
 fs.writeFileSync('public/atom.xml', feed.render('atom-1.0'));
-
-// again kudos to https://github.com/scottnonnenberg/blog/blob/master/src/util/fixLocalLinks.js
-function fixLocalLinks(html, domain) {
-  if (!html) {
-    return html;
-  }
-
-  const linkR = /href="(\/[^"]*)"/g;
-  return html.replace(linkR, (match, link) => `href="${domain + link}"`);
-}
